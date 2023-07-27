@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h3>Контакты</h3>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <class=row>
+      <div class="card" style="width: 25rem;">
+        <div class="card-body">
+          <p class="card-text">
+            211 Quality Circle, Suite 210<br>
+            College Station, TX 77842<br><br>
+            Телефон: 800-226-0083 (США)<br>
+            201-680-6685 (другие страны)<br><br>
+            E-mail: web.queries@computershare.com<br><br>
+            Сайт: www.computershare.com/investor
+          </p>
+        </div>
+      </div>
+    </class>
+
+    <br>
+
+    <main class="row">
+      <div class="col-3">
+        <div class="card">
+
+          <form method="post">
+            {% csrf_token %}
+            <legend>Оставьте контакты для связи</legend>
+            <div class="mb-3">
+              <label for="exampleInputName1" class="form-label">Имя</label>
+              <input type="text" name="name" class="form-control" id="exampleInputName1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>
